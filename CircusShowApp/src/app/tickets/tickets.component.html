@@ -1,1 +1,13 @@
-<p>tickets works!</p>
+<h2> Circus tickets!</h2>
+<button (click)="this.isShowing = !this.isShowing">
+  <ng-container *ngIf="!isShowing">Show tickets</ng-container>
+  <ng-container *ngIf="isShowing">Hide tickets</ng-container>
+</button>
+
+
+<ul *ngIf="isShowing">
+  <li *ngFor="let ticket of tickets">
+    <img [src]='ticket.image' [alt]='ticket.show' width="200">
+    {{ ticket.show }} by {{ ticket.show }}
+  </li>
+</ul>
