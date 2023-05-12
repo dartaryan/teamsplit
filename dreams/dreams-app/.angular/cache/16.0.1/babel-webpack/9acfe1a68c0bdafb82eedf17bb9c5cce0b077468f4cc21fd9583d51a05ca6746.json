@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var ActionTypes = /*#__PURE__*/(() => {\n  ActionTypes = ActionTypes || {};\n  ActionTypes[\"REGISTER\"] = \"[Auth] Register\";\n  ActionTypes[\"REGISTER_SUCCESS\"] = \"[Auth] success\";\n  ActionTypes[\"REGISTER_FAILURE\"] = \"[Auth] failure\";\n  return ActionTypes;\n})();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
