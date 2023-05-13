@@ -1,7 +1,7 @@
 <h2>Party Tickets</h2>
 
 <ul *ngIf="isShowing">
-  <ng-container *ngFor="let singleTicket of tickets; let i=index">
-<app-ticket [ticket]="singleTicket"></app-ticket>
+  <ng-container *ngFor="let singleTicket of tickets">
+    <app-ticket [ticket]="singleTicket"></app-ticket>
   </ng-container>
 </ul>

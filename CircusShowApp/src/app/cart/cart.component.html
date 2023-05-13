@@ -1,0 +1,13 @@
+<h1>Your cart</h1>
+
+<div *ngIf="getCart().length>0; else empty">
+  <div *ngFor="let ticket of getCart()">
+    <p>{{ticket.show}} || {{ticket.amount | currency:'ILS'}}</p>
+  </div>
+</div>
+
+<ng-template #empty>
+  <h4>
+    Get some tickets!
+  </h4>
+</ng-template>

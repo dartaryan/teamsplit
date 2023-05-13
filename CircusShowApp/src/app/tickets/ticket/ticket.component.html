@@ -2,5 +2,6 @@
   <p class="title"> || {{ ticket.show | titlecase}} at {{ ticket.location | titlecase }} ||</p>
   <img [src]='ticket.image' [alt]='ticket.show' width="250">
   <p class="currency">{{ticket.amount | currency:'ILS'}}</p>
-  <button (click)="addToCart()">Add to cart 🛒</button>
+  <button *ngIf="!isInCart" (click)="addToCart()">🛒 Add to cart 🛒</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()"> Remove </button>
 </li>

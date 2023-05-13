@@ -1,11 +1,6 @@
 ul {
   display: flex;
   flex-wrap: wrap;
-}
-
-.ticket {
-  list-style: none;
-  text-overflow: ellipsis;
-  width: 25%;
-  text-align: center;
+  align-content: center;
+  justify-content: space-evenly
 }
