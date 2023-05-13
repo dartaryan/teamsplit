@@ -1,11 +1,6 @@
 import {Component} from '@angular/core';
+import {Ticket} from "../ticket/ticket.interface";
 
-interface Ticket {
-  show: string;
-  location: string;
-  image: string;
-  amount: number;
-}
 
 @Component({
   selector: 'app-tickets',
@@ -41,7 +36,8 @@ export class TicketsComponent {
     },
   ]
 
-  isShowing: boolean = true;
+  public cart: Ticket[] = [];
+  public isShowing: boolean = true;
 
   constructor() {
   }
