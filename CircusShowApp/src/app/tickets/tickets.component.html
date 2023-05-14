@@ -1,7 +1,7 @@
 <h2>Party Tickets</h2>
 
-<ul *ngIf="isShowing">
+<ul *ngIf="isShowing" class="flex flex-wrap justify-center">
   <ng-container *ngFor="let singleTicket of tickets">
-    <app-ticket [ticket]="singleTicket"></app-ticket>
+    <app-ticket [ticket]="singleTicket" class="w-1/2 p-5 text-center"></app-ticket>
   </ng-container>
 </ul>

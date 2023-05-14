@@ -1,7 +1,15 @@
-<li class="ticket">
-  <p class="title"> || {{ ticket.show | titlecase}} at {{ ticket.location | titlecase }} ||</p>
-  <img [src]='ticket.image' [alt]='ticket.show' width="250">
-  <p class="currency">{{ticket.amount | currency:'ILS'}}</p>
-  <button *ngIf="!isInCart" (click)="addToCart()">🛒 Add to cart 🛒</button>
-  <button *ngIf="isInCart" (click)="removeFromCart()"> Remove </button>
+<li class="flex border rounded-xl h-60">
+  <img [src]="ticket.image" [alt]="ticket.show" width="250"
+       class="m-auto rounded-sm"/>
+  <div class="m-auto">
+    <p class="text-lg">|| {{ ticket.show | titlecase}} at {{ ticket.location | titlecase }} ||</p>
+    <p class="my-4">{{ticket.amount | currency:'ILS'}}</p>
+    <button class="bg-yellow-400 rounded p-3" *ngIf="!isInCart"
+            (click)="addToCart()">🛒 Add to Cart 🛒
+    </button>
+    <button class="bg-yellow-400 rounded p-3" *ngIf="isInCart"
+            (click)="removeFromCart()">Remove from
+      Cart
+    </button>
+  </div>
 </li>

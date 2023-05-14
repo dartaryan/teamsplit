@@ -2,7 +2,7 @@
 
 <div *ngIf="getCart().length>0; else empty">
   <div *ngFor="let ticket of getCart()">
-    <p>{{ticket.show}} || {{ticket.amount | currency:'ILS'}}</p>
+    <p class="my-4 text-2xl">{{ticket.show}} || {{ticket.amount | currency:'ILS'}}</p>
   </div>
 </div>
 

@@ -1,10 +1,13 @@
-<nav class="flex justify-between p-4 bg-purple-00 text-white">
+<nav class="flex justify-between p-4 bg-purple-900 text-white">
   <div>
-    <h1> Party tickets!</h1>
+    <a routerLink="/">Home</a>
   </div>
   <div>
-    <button>My Cart</button>
+    <a class="mx-4" routerLink="/cart">My Cart</a>
+    <a class="mx-4" routerLink="/login">Login</a>
+    <a class="mx-4" routerLink="/register">Register</a>
   </div>
 </nav>
-
-<router-outlet></router-outlet>
+<div class="p-4">
+  <router-outlet></router-outlet>
+</div>
